@@ -9,18 +9,10 @@ import { WishItem } from 'src/models/wishItems';
 export class AppComponent {
   items:WishItem[] =[ 
     new WishItem('moisturiser'),
-    new WishItem('cleanser',true),
-    new WishItem('face wash')
+    new WishItem('cleanser'),
+    new WishItem('face wash',true)
   ];
-
-  filter:any=()=>{};
-
-  get visibleItems():WishItem[]{
-    return this.items.filter(this.filter);
-  };
-
-
-  
-  
+  title="";
+  filter:any;
   
 }
