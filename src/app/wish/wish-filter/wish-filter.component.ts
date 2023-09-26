@@ -1,4 +1,4 @@
-import { Component,OnInit,Output,EventEmitter,Input } from '@angular/core';
+import { Component,Output,EventEmitter,Input } from '@angular/core';
 import { WishItem } from 'src/app/shared/services/models/wishItems';
 
 const filters=[
@@ -12,12 +12,10 @@ const filters=[
   templateUrl: './wish-filter.component.html',
   styleUrls: ['./wish-filter.component.css']
 })
-export class WishFilterComponent implements OnInit {
+export class WishFilterComponent {
   @Input() filter:any;
   @Output() filterChange = new EventEmitter<any>();
-  constructor(){
-  }
-
+  
   ngOnInit(): void {
       this.updateFilter('0');
   }

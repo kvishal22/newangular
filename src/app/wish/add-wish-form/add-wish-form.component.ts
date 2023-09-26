@@ -1,17 +1,15 @@
-import { Component,Output,EventEmitter,OnInit } from '@angular/core';
+import { Component,Output,EventEmitter } from '@angular/core';
 import { WishItem } from 'src/app/shared/services/models/wishItems';
+
 @Component({
   selector: 'add-wish-form',
   templateUrl: './add-wish-form.component.html',
   styleUrls: ['./add-wish-form.component.css']
 })
-export class AddWishFormComponent implements OnInit{
+export class AddWishFormComponent{
 
   @Output() addWish = new EventEmitter<WishItem>();
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+ 
   newWishText='';
 
   addNewWish(){

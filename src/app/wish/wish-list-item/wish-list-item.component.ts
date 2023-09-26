@@ -1,6 +1,6 @@
-import { Component,Output,Input,EventEmitter } from '@angular/core';
-import { WishItem } from '../shared/services/models/wishItems';
-import { EventService } from '../shared/services/services/EventService';
+import { Component,Input } from '@angular/core';
+import { WishItem } from '../../shared/services/models/wishItems';
+import { EventService } from '../../shared/services/services/EventService';
 
 @Component({
   selector: 'wish-list-item',
@@ -13,7 +13,6 @@ export class WishListItemComponent {
   
 
   get cssClass(){
-    //return this.fulfilled ? ['strikeout','text-muted'] : '[]';
       return {'strikeout text-muted':this.wish.isComplete};
   }
   constructor(private events:EventService){

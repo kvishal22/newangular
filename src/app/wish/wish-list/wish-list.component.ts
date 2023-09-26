@@ -1,4 +1,4 @@
-import { Component,Input,OnInit } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { WishItem } from 'src/app/shared/services/models/wishItems';
 
 @Component({
@@ -6,14 +6,11 @@ import { WishItem } from 'src/app/shared/services/models/wishItems';
   templateUrl: './wish-list.component.html',
   styleUrls: ['./wish-list.component.css']
 })
-export class WishListComponent implements OnInit{
+export class WishListComponent{
 
   
   @Input() wishes:WishItem[]=[];
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  
 
   
 
