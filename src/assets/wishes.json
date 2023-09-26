@@ -1,0 +1,6 @@
+[
+    {"wishText":"moisturiser", "isComplete":false},
+    {"wishText":"cleanser", "isComplete":false},
+    {"wishText":"face-wash", "isComplete":true},
+    {"wishText":"retinol","isComplete":false}
+]
