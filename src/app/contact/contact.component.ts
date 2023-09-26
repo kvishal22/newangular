@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+
+  senderNameControl = new FormControl('');
+  senderEmailControl = new FormControl('');
+  senderMessageControl = new FormControl('');
+
+  submitForm(){
+    if(this.senderEmailControl.dirty){
+      alert('you changed the email field');
+    }
+  }
 
 }
